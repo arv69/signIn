@@ -24,8 +24,8 @@
           <div class="email-box">
             <label class="floating-label">Enter your Password</label>
            <div class="input-icon">
-             <input type="password" placeholder="Enter your password">
-          <i class="fa-regular fa-eye"></i>
+             <input type="password" placeholder="Enter your password" id="password" >
+          <i class="fa-solid fa-eye" id="eyeIcon"></i>
            </div>
           </div>
          </div>
@@ -47,5 +47,20 @@
       <div class="blur"></div>
     </div>
   </div>
+  <script>
+    const eyeIcon=document.getElementById('eyeIcon');
+    const passwordInput=document.getElementById('password');
+    eyeIcon.addEventListener('click',function(e){
+      if(passwordInput.type==='password'){
+        passwordInput.type='text';
+      }
+      else{
+        passwordInput.type='password';
+      }
+      eyeIcon.classList.toggle('fa-eye');
+      eyeIcon.classList.toggle('fa-eye-slash');
+    })
+    
+  </script>
 </body>
 </html>
